@@ -150,7 +150,7 @@ namespace SportsSchedulePro
 
             if(saveFileDialogExport.ShowDialog() == DialogResult.OK)
             {
-                string fileName = saveFileDialogExport.FileName + (saveFileDialogExport.FileName.Contains(".csv") ? saveFileDialogExport.FileName : saveFileDialogExport.FileName + ".csv");
+                string fileName = saveFileDialogExport.FileName + (saveFileDialogExport.FileName.Contains(".csv") ? "" : ".csv");
                 string fileData = ExportService.ExportSchedule();
 
                 File.WriteAllText(fileName, fileData);
