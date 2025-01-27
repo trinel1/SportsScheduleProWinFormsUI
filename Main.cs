@@ -1,4 +1,5 @@
 ﻿using SportsSchedulePro.Data;
+using SportsSchedulePro.Services;
 using SportsScheduleProLibrary;
 using SportsScheduleProLibrary.Data;
 using SportsScheduleProLibrary.Models;
@@ -8,6 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -140,6 +142,19 @@ namespace SportsSchedulePro
         private void editorFields_Click(object sender, EventArgs e)
         {
             new FieldEditor().Show();
+        }
+
+        private void exportScheduleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialogExport.Filter = "Comma-separated values (*.csv)|*.csv";
+
+            if(saveFileDialogExport.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = saveFileDialogExport.FileName + (saveFileDialogExport.FileName.Contains(".csv") ? saveFileDialogExport.FileName : saveFileDialogExport.FileName + ".csv");
+                string fileData = ExportService.ExportSchedule();
+
+                File.WriteAllText(fileName, fileData);
+            }
         }
     }
 }
