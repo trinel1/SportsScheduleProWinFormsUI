@@ -37,23 +37,24 @@ namespace SportsSchedulePro
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkedListBoxSeasons = new System.Windows.Forms.CheckedListBox();
             this.dataGridViewTournaments = new System.Windows.Forms.DataGridView();
             this.dataGridViewCoaches = new System.Windows.Forms.DataGridView();
             this.dataGridViewPlayers = new System.Windows.Forms.DataGridView();
-            this.comboBoxSeason = new System.Windows.Forms.ComboBox();
             this.comboBoxLeague = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxSeason = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.dataGridViewGames = new System.Windows.Forms.DataGridView();
             this.lblShirt = new System.Windows.Forms.Label();
             this.lblShort = new System.Windows.Forms.Label();
             this.dataGridViewExcludedDates = new System.Windows.Forms.DataGridView();
-            this.checkedListBoxSeasons = new System.Windows.Forms.CheckedListBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTournaments)).BeginInit();
@@ -66,7 +67,7 @@ namespace SportsSchedulePro
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(676, 33);
+            this.dataGridView1.Location = new System.Drawing.Point(677, 33);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -74,11 +75,12 @@ namespace SportsSchedulePro
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(677, 455);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.DataGridView1_SelectionChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(676, 494);
+            this.button1.Location = new System.Drawing.Point(677, 493);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 29);
             this.button1.TabIndex = 1;
@@ -91,7 +93,7 @@ namespace SportsSchedulePro
             this.button2.BackColor = System.Drawing.Color.DarkRed;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.button2.ForeColor = System.Drawing.Color.Gold;
-            this.button2.Location = new System.Drawing.Point(1259, 494);
+            this.button2.Location = new System.Drawing.Point(1259, 493);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 29);
             this.button2.TabIndex = 2;
@@ -101,7 +103,7 @@ namespace SportsSchedulePro
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(815, 494);
+            this.button3.Location = new System.Drawing.Point(815, 493);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(154, 29);
             this.button3.TabIndex = 3;
@@ -121,7 +123,7 @@ namespace SportsSchedulePro
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 62);
+            this.label2.Location = new System.Drawing.Point(24, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 5;
@@ -149,12 +151,20 @@ namespace SportsSchedulePro
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.groupBox1.Location = new System.Drawing.Point(24, 189);
+            this.groupBox1.Location = new System.Drawing.Point(24, 185);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(606, 568);
+            this.groupBox1.Size = new System.Drawing.Size(606, 572);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Properties";
+            // 
+            // checkedListBoxSeasons
+            // 
+            this.checkedListBoxSeasons.FormattingEnabled = true;
+            this.checkedListBoxSeasons.Location = new System.Drawing.Point(82, 131);
+            this.checkedListBoxSeasons.Name = "checkedListBoxSeasons";
+            this.checkedListBoxSeasons.Size = new System.Drawing.Size(217, 48);
+            this.checkedListBoxSeasons.TabIndex = 11;
             // 
             // dataGridViewTournaments
             // 
@@ -165,7 +175,7 @@ namespace SportsSchedulePro
             this.dataGridViewTournaments.Name = "dataGridViewTournaments";
             this.dataGridViewTournaments.RowHeadersWidth = 51;
             this.dataGridViewTournaments.RowTemplate.Height = 29;
-            this.dataGridViewTournaments.Size = new System.Drawing.Size(246, 110);
+            this.dataGridViewTournaments.Size = new System.Drawing.Size(246, 114);
             this.dataGridViewTournaments.TabIndex = 10;
             // 
             // dataGridViewCoaches
@@ -177,7 +187,7 @@ namespace SportsSchedulePro
             this.dataGridViewCoaches.Name = "dataGridViewCoaches";
             this.dataGridViewCoaches.RowHeadersWidth = 51;
             this.dataGridViewCoaches.RowTemplate.Height = 29;
-            this.dataGridViewCoaches.Size = new System.Drawing.Size(334, 110);
+            this.dataGridViewCoaches.Size = new System.Drawing.Size(334, 114);
             this.dataGridViewCoaches.TabIndex = 9;
             this.dataGridViewCoaches.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCoaches_CellContentClick);
             this.dataGridViewCoaches.DoubleClick += new System.EventHandler(this.dataGridViewCoaches_DoubleClick);
@@ -186,23 +196,13 @@ namespace SportsSchedulePro
             // 
             this.dataGridViewPlayers.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridViewPlayers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPlayers.Location = new System.Drawing.Point(7, 270);
+            this.dataGridViewPlayers.Location = new System.Drawing.Point(7, 221);
             this.dataGridViewPlayers.Name = "dataGridViewPlayers";
             this.dataGridViewPlayers.RowHeadersWidth = 51;
             this.dataGridViewPlayers.RowTemplate.Height = 29;
-            this.dataGridViewPlayers.Size = new System.Drawing.Size(593, 112);
+            this.dataGridViewPlayers.Size = new System.Drawing.Size(593, 191);
             this.dataGridViewPlayers.TabIndex = 8;
             this.dataGridViewPlayers.DoubleClick += new System.EventHandler(this.dataGridViewPlayers_DoubleClick);
-            // 
-            // comboBoxSeason
-            // 
-            this.comboBoxSeason.FormattingEnabled = true;
-            this.comboBoxSeason.Location = new System.Drawing.Point(676, 829);
-            this.comboBoxSeason.Name = "comboBoxSeason";
-            this.comboBoxSeason.Size = new System.Drawing.Size(259, 28);
-            this.comboBoxSeason.TabIndex = 7;
-            this.comboBoxSeason.Visible = false;
-            this.comboBoxSeason.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBoxLeague
             // 
@@ -233,7 +233,7 @@ namespace SportsSchedulePro
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 237);
+            this.label6.Location = new System.Drawing.Point(7, 198);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 20);
             this.label6.TabIndex = 2;
@@ -242,7 +242,7 @@ namespace SportsSchedulePro
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 130);
+            this.label5.Location = new System.Drawing.Point(7, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 20);
             this.label5.TabIndex = 1;
@@ -257,10 +257,20 @@ namespace SportsSchedulePro
             this.label4.TabIndex = 0;
             this.label4.Text = "League";
             // 
+            // comboBoxSeason
+            // 
+            this.comboBoxSeason.FormattingEnabled = true;
+            this.comboBoxSeason.Location = new System.Drawing.Point(677, 829);
+            this.comboBoxSeason.Name = "comboBoxSeason";
+            this.comboBoxSeason.Size = new System.Drawing.Size(259, 28);
+            this.comboBoxSeason.TabIndex = 7;
+            this.comboBoxSeason.Visible = false;
+            this.comboBoxSeason.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(676, 548);
+            this.label9.Location = new System.Drawing.Point(677, 548);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 20);
             this.label9.TabIndex = 8;
@@ -279,7 +289,7 @@ namespace SportsSchedulePro
             // 
             this.dataGridViewGames.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridViewGames.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewGames.Location = new System.Drawing.Point(676, 572);
+            this.dataGridViewGames.Location = new System.Drawing.Point(677, 572);
             this.dataGridViewGames.Name = "dataGridViewGames";
             this.dataGridViewGames.RowHeadersWidth = 51;
             this.dataGridViewGames.RowTemplate.Height = 29;
@@ -289,7 +299,7 @@ namespace SportsSchedulePro
             // lblShirt
             // 
             this.lblShirt.AutoSize = true;
-            this.lblShirt.Location = new System.Drawing.Point(121, 62);
+            this.lblShirt.Location = new System.Drawing.Point(121, 61);
             this.lblShirt.Name = "lblShirt";
             this.lblShirt.Size = new System.Drawing.Size(56, 20);
             this.lblShirt.TabIndex = 11;
@@ -308,27 +318,29 @@ namespace SportsSchedulePro
             // 
             this.dataGridViewExcludedDates.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridViewExcludedDates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExcludedDates.Location = new System.Drawing.Point(290, 33);
+            this.dataGridViewExcludedDates.Location = new System.Drawing.Point(290, 56);
             this.dataGridViewExcludedDates.Name = "dataGridViewExcludedDates";
             this.dataGridViewExcludedDates.RowHeadersWidth = 51;
             this.dataGridViewExcludedDates.RowTemplate.Height = 29;
-            this.dataGridViewExcludedDates.Size = new System.Drawing.Size(334, 122);
+            this.dataGridViewExcludedDates.Size = new System.Drawing.Size(334, 123);
             this.dataGridViewExcludedDates.TabIndex = 13;
             this.dataGridViewExcludedDates.DoubleClick += new System.EventHandler(this.dataGridViewExcludedDates_DoubleClick);
             // 
-            // checkedListBoxSeasons
+            // label10
             // 
-            this.checkedListBoxSeasons.FormattingEnabled = true;
-            this.checkedListBoxSeasons.Location = new System.Drawing.Point(82, 130);
-            this.checkedListBoxSeasons.Name = "checkedListBoxSeasons";
-            this.checkedListBoxSeasons.Size = new System.Drawing.Size(217, 70);
-            this.checkedListBoxSeasons.TabIndex = 11;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(290, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(144, 20);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Schedule Exceptions";
             // 
             // TeamEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1365, 767);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.dataGridViewExcludedDates);
             this.Controls.Add(this.lblShort);
             this.Controls.Add(this.lblShirt);
@@ -387,5 +399,6 @@ namespace SportsSchedulePro
         private System.Windows.Forms.Label lblShort;
         private System.Windows.Forms.DataGridView dataGridViewExcludedDates;
         private System.Windows.Forms.CheckedListBox checkedListBoxSeasons;
+        private System.Windows.Forms.Label label10;
     }
 }

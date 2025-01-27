@@ -34,7 +34,7 @@ namespace SportsSchedulePro
 
         private void TeamEditor_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = dbc.Teams.Include(s => s.ExcludedGameDates).Include(s => s.League).Include(s => s.Seasons).ToList();
+            dataGridView1.DataSource = dbc.Teams.Include(s => s.ExcludedGameDates).Include(s => s.League).Include(s => s.Seasons).OrderBy(s => s.League).ToList();
             dataGridView1.Rows[0].Selected = true;
         }
 
@@ -224,6 +224,11 @@ namespace SportsSchedulePro
 
                 dataGridViewExcludedDates.DataSource = dbc.ExcludedGameDates.Include(s => s.Team).Where(s => s.Team == team).ToList();
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

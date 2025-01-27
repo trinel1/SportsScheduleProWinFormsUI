@@ -119,5 +119,27 @@ namespace SportsSchedulePro
                 dataGridView1.DataSource = dbc.Teams.ToList();
             }
         }
+
+        private void editorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new LeagueEditor().Show();
+        }
+
+        private void viewFieldsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dbc.Fields.ToList();
+            dataGridView1.ReadOnly = false;
+        }
+
+        private void viewLeaguesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dbc.Leagues.ToList();
+            dataGridView1.ReadOnly = false;
+        }
+
+        private void editorFields_Click(object sender, EventArgs e)
+        {
+            new FieldEditor().Show();
+        }
     }
 }
