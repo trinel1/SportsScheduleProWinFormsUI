@@ -30,7 +30,7 @@ namespace SportsSchedulePro.Services
                     excelWriter.Context.RegisterClassMap<SportsScheduleProDataMap>();
                     excelWriter.WriteHeader<Game>();
                     excelWriter.NextRecord();
-                    excelWriter.WriteRecords(dbc.Games.Include(s => s.Field).Include(s => s.League).ToList());
+                    excelWriter.WriteRecords(dbc.Games.Include(s => s.Field).Include(s => s.League).OrderBy(s => s.League.LeagueId).OrderBy(s => s.ChosenScheduleTime).ToList());
                     writer.Flush();
                 }
 
