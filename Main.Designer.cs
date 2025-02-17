@@ -64,6 +64,8 @@ namespace SportsSchedulePro
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.saveFileDialogExport = new System.Windows.Forms.SaveFileDialog();
+            this.viewGamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGameEditor = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -79,8 +81,8 @@ namespace SportsSchedulePro
             this.toolStripTextBox1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1220, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1068, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -88,7 +90,7 @@ namespace SportsSchedulePro
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 27);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 23);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // toolStripMenuItem2
@@ -100,33 +102,33 @@ namespace SportsSchedulePro
             this.exportTeamsToolStripMenuItem,
             this.dataToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(72, 27);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(59, 23);
             this.toolStripMenuItem2.Text = "Actions";
             // 
             // createScheduleToolStripMenuItem
             // 
             this.createScheduleToolStripMenuItem.Name = "createScheduleToolStripMenuItem";
-            this.createScheduleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.createScheduleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createScheduleToolStripMenuItem.Text = "Create Schedule";
             this.createScheduleToolStripMenuItem.Click += new System.EventHandler(this.createScheduleToolStripMenuItem_Click);
             // 
             // createTeamsToolStripMenuItem
             // 
             this.createTeamsToolStripMenuItem.Name = "createTeamsToolStripMenuItem";
-            this.createTeamsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.createTeamsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createTeamsToolStripMenuItem.Text = "Create Teams";
             // 
             // exportScheduleToolStripMenuItem
             // 
             this.exportScheduleToolStripMenuItem.Name = "exportScheduleToolStripMenuItem";
-            this.exportScheduleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exportScheduleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportScheduleToolStripMenuItem.Text = "Export Schedule";
             this.exportScheduleToolStripMenuItem.Click += new System.EventHandler(this.exportScheduleToolStripMenuItem_Click);
             // 
             // exportTeamsToolStripMenuItem
             // 
             this.exportTeamsToolStripMenuItem.Name = "exportTeamsToolStripMenuItem";
-            this.exportTeamsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exportTeamsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportTeamsToolStripMenuItem.Text = "Export Teams";
             // 
             // dataToolStripMenuItem
@@ -142,49 +144,53 @@ namespace SportsSchedulePro
             this.viewRefereesToolStripMenuItem,
             this.viewSeasonsToolStripMenuItem,
             this.viewTeamToolStripMenuItem,
-            this.viewTournamentsToolStripMenuItem});
+            this.viewTournamentsToolStripMenuItem,
+            this.viewGamesToolStripMenuItem});
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataToolStripMenuItem.Text = "Data";
             // 
             // viewAlertsToolStripMenuItem
             // 
             this.viewAlertsToolStripMenuItem.Name = "viewAlertsToolStripMenuItem";
-            this.viewAlertsToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewAlertsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewAlertsToolStripMenuItem.Text = "View Alerts";
             this.viewAlertsToolStripMenuItem.Click += new System.EventHandler(this.viewAlertsToolStripMenuItem_Click);
             // 
             // viewAlertContactsToolStripMenuItem
             // 
             this.viewAlertContactsToolStripMenuItem.Name = "viewAlertContactsToolStripMenuItem";
-            this.viewAlertContactsToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewAlertContactsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewAlertContactsToolStripMenuItem.Text = "View AlertContacts";
+            this.viewAlertContactsToolStripMenuItem.Click += new System.EventHandler(this.viewAlertContactsToolStripMenuItem_Click);
             // 
             // viewClubsToolStripMenuItem
             // 
             this.viewClubsToolStripMenuItem.Name = "viewClubsToolStripMenuItem";
-            this.viewClubsToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewClubsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewClubsToolStripMenuItem.Text = "View Clubs";
+            this.viewClubsToolStripMenuItem.Click += new System.EventHandler(this.viewClubsToolStripMenuItem_Click);
             // 
             // viewCoachesToolStripMenuItem
             // 
             this.viewCoachesToolStripMenuItem.Name = "viewCoachesToolStripMenuItem";
-            this.viewCoachesToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewCoachesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewCoachesToolStripMenuItem.Text = "View Coaches";
+            this.viewCoachesToolStripMenuItem.Click += new System.EventHandler(this.viewCoachesToolStripMenuItem_Click);
             // 
             // viewFieldsToolStripMenuItem
             // 
             this.viewFieldsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editorToolStripMenuItemFields});
             this.viewFieldsToolStripMenuItem.Name = "viewFieldsToolStripMenuItem";
-            this.viewFieldsToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewFieldsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewFieldsToolStripMenuItem.Text = "View Fields";
             this.viewFieldsToolStripMenuItem.Click += new System.EventHandler(this.viewFieldsToolStripMenuItem_Click);
             // 
             // editorToolStripMenuItemFields
             // 
             this.editorToolStripMenuItemFields.Name = "editorToolStripMenuItemFields";
-            this.editorToolStripMenuItemFields.Size = new System.Drawing.Size(132, 26);
+            this.editorToolStripMenuItemFields.Size = new System.Drawing.Size(105, 22);
             this.editorToolStripMenuItemFields.Text = "Editor";
             this.editorToolStripMenuItemFields.Click += new System.EventHandler(this.editorFields_Click);
             // 
@@ -193,56 +199,60 @@ namespace SportsSchedulePro
             this.viewLeaguesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editorToolStripMenuItem1});
             this.viewLeaguesToolStripMenuItem.Name = "viewLeaguesToolStripMenuItem";
-            this.viewLeaguesToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewLeaguesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewLeaguesToolStripMenuItem.Text = "View Leagues";
             this.viewLeaguesToolStripMenuItem.Click += new System.EventHandler(this.viewLeaguesToolStripMenuItem_Click);
             // 
             // editorToolStripMenuItem1
             // 
             this.editorToolStripMenuItem1.Name = "editorToolStripMenuItem1";
-            this.editorToolStripMenuItem1.Size = new System.Drawing.Size(132, 26);
+            this.editorToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
             this.editorToolStripMenuItem1.Text = "Editor";
             this.editorToolStripMenuItem1.Click += new System.EventHandler(this.editorToolStripMenuItem1_Click);
             // 
             // viewLocationsToolStripMenuItem
             // 
             this.viewLocationsToolStripMenuItem.Name = "viewLocationsToolStripMenuItem";
-            this.viewLocationsToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewLocationsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewLocationsToolStripMenuItem.Text = "View Locations";
+            this.viewLocationsToolStripMenuItem.Click += new System.EventHandler(this.viewLocationsToolStripMenuItem_Click);
             // 
             // viewRefereesToolStripMenuItem
             // 
             this.viewRefereesToolStripMenuItem.Name = "viewRefereesToolStripMenuItem";
-            this.viewRefereesToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewRefereesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewRefereesToolStripMenuItem.Text = "View Referees";
+            this.viewRefereesToolStripMenuItem.Click += new System.EventHandler(this.viewRefereesToolStripMenuItem_Click);
             // 
             // viewSeasonsToolStripMenuItem
             // 
             this.viewSeasonsToolStripMenuItem.Name = "viewSeasonsToolStripMenuItem";
-            this.viewSeasonsToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewSeasonsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewSeasonsToolStripMenuItem.Text = "View Seasons";
+            this.viewSeasonsToolStripMenuItem.Click += new System.EventHandler(this.viewSeasonsToolStripMenuItem_Click);
             // 
             // viewTeamToolStripMenuItem
             // 
             this.viewTeamToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editorToolStripMenuItem});
             this.viewTeamToolStripMenuItem.Name = "viewTeamToolStripMenuItem";
-            this.viewTeamToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewTeamToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewTeamToolStripMenuItem.Text = "View Teams";
             this.viewTeamToolStripMenuItem.Click += new System.EventHandler(this.viewTeamToolStripMenuItem_Click);
             // 
             // editorToolStripMenuItem
             // 
             this.editorToolStripMenuItem.Name = "editorToolStripMenuItem";
-            this.editorToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.editorToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.editorToolStripMenuItem.Text = "Editor";
             this.editorToolStripMenuItem.Click += new System.EventHandler(this.editorToolStripMenuItem_Click);
             // 
             // viewTournamentsToolStripMenuItem
             // 
             this.viewTournamentsToolStripMenuItem.Name = "viewTournamentsToolStripMenuItem";
-            this.viewTournamentsToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.viewTournamentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewTournamentsToolStripMenuItem.Text = "View Tournaments";
+            this.viewTournamentsToolStripMenuItem.Click += new System.EventHandler(this.viewTournamentsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -251,27 +261,27 @@ namespace SportsSchedulePro
             this.sendFieldClosedAlertToolStripMenuItem,
             this.sendSeasonStartAlertToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(61, 27);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(49, 23);
             this.toolStripMenuItem1.Text = "Alerts";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // sendWeatherAlertToolStripMenuItem
             // 
             this.sendWeatherAlertToolStripMenuItem.Name = "sendWeatherAlertToolStripMenuItem";
-            this.sendWeatherAlertToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.sendWeatherAlertToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.sendWeatherAlertToolStripMenuItem.Text = "Send Weather Alert";
             this.sendWeatherAlertToolStripMenuItem.Click += new System.EventHandler(this.sendWeatherAlertToolStripMenuItem_Click);
             // 
             // sendFieldClosedAlertToolStripMenuItem
             // 
             this.sendFieldClosedAlertToolStripMenuItem.Name = "sendFieldClosedAlertToolStripMenuItem";
-            this.sendFieldClosedAlertToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.sendFieldClosedAlertToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.sendFieldClosedAlertToolStripMenuItem.Text = "Send Field Closed Alert";
             // 
             // sendSeasonStartAlertToolStripMenuItem
             // 
             this.sendSeasonStartAlertToolStripMenuItem.Name = "sendSeasonStartAlertToolStripMenuItem";
-            this.sendSeasonStartAlertToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.sendSeasonStartAlertToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.sendSeasonStartAlertToolStripMenuItem.Text = "Send Season Start Alert";
             // 
             // dBStatusToolStripMenuItem
@@ -280,20 +290,20 @@ namespace SportsSchedulePro
             this.connectToolStripMenuItem,
             this.disconnectToolStripMenuItem});
             this.dBStatusToolStripMenuItem.Name = "dBStatusToolStripMenuItem";
-            this.dBStatusToolStripMenuItem.Size = new System.Drawing.Size(87, 27);
+            this.dBStatusToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
             this.dBStatusToolStripMenuItem.Text = "DB Status";
             // 
             // connectToolStripMenuItem
             // 
             this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
-            this.connectToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.connectToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.connectToolStripMenuItem.Text = "Connect";
             this.connectToolStripMenuItem.Click += new System.EventHandler(this.connectToolStripMenuItem_Click);
             // 
             // disconnectToolStripMenuItem
             // 
             this.disconnectToolStripMenuItem.Name = "disconnectToolStripMenuItem";
-            this.disconnectToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.disconnectToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.disconnectToolStripMenuItem.Text = "Disconnect";
             this.disconnectToolStripMenuItem.Click += new System.EventHandler(this.disconnectToolStripMenuItem_Click);
             // 
@@ -302,7 +312,7 @@ namespace SportsSchedulePro
             this.toolStripTextBox1.BackColor = System.Drawing.Color.DarkRed;
             this.toolStripTextBox1.Enabled = false;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(88, 23);
             // 
             // timer1
             // 
@@ -313,33 +323,51 @@ namespace SportsSchedulePro
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(600, 35);
+            this.dataGridView1.Location = new System.Drawing.Point(525, 26);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(617, 579);
+            this.dataGridView1.Size = new System.Drawing.Size(540, 434);
             this.dataGridView1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(853, 729);
+            this.button1.Location = new System.Drawing.Point(746, 547);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 29);
+            this.button1.Size = new System.Drawing.Size(95, 22);
             this.button1.TabIndex = 2;
             this.button1.Text = "Add New ✨";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // viewGamesToolStripMenuItem
+            // 
+            this.viewGamesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnGameEditor});
+            this.viewGamesToolStripMenuItem.Name = "viewGamesToolStripMenuItem";
+            this.viewGamesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewGamesToolStripMenuItem.Text = "View Games";
+            // 
+            // btnGameEditor
+            // 
+            this.btnGameEditor.Name = "btnGameEditor";
+            this.btnGameEditor.Size = new System.Drawing.Size(180, 22);
+            this.btnGameEditor.Text = "Editor";
+            this.btnGameEditor.Click += new System.EventHandler(this.btnGameEditor_Click);
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1220, 616);
+            this.ClientSize = new System.Drawing.Size(1068, 462);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
             this.Text = "SportsSchedulePro";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -387,6 +415,8 @@ namespace SportsSchedulePro
         private System.Windows.Forms.ToolStripMenuItem editorToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editorToolStripMenuItemFields;
         private System.Windows.Forms.SaveFileDialog saveFileDialogExport;
+        private System.Windows.Forms.ToolStripMenuItem viewGamesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnGameEditor;
     }
 }
 

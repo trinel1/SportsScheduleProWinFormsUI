@@ -156,5 +156,52 @@ namespace SportsSchedulePro
                 File.WriteAllText(fileName, fileData);
             }
         }
+
+        private void viewAlertContactsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dbc.AlertContacts.ToList();
+            dataGridView1.ReadOnly = false;
+        }
+
+        private void viewClubsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dbc.Clubs.ToList();
+            dataGridView1.ReadOnly = false;
+        }
+
+        private void viewCoachesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dbc.Coaches.ToList();
+            dataGridView1.ReadOnly = false;
+        }
+
+        private void viewLocationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dbc.Locations.ToList();
+            dataGridView1.ReadOnly = false;
+        }
+
+        private void viewRefereesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dbc.Referees.ToList();
+            dataGridView1.ReadOnly = false;
+        }
+
+        private void viewSeasonsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dbc.Seasons.ToList();
+            dataGridView1.ReadOnly = false;
+        }
+
+        private void viewTournamentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dbc.Tournaments.ToList();
+            dataGridView1.ReadOnly = false;
+        }
+
+        private void btnGameEditor_Click(object sender, EventArgs e)
+        {
+            new GameEditor().ShowDialog();
+        }
     }
 }
