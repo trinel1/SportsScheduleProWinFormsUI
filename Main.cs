@@ -91,7 +91,7 @@ namespace SportsSchedulePro
 
         private void createScheduleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RandomScheduleService.GameSchedule();
+            RandomScheduleService.GameScheduleV2();
         }
 
         private void viewTeamToolStripMenuItem_Click(object sender, EventArgs e)
