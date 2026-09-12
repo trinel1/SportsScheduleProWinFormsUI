@@ -35,7 +35,8 @@ namespace SportsSchedulePro
         private void TeamEditor_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = dbc.Teams.Include(s => s.ExcludedGameDates).Include(s => s.League).Include(s => s.Seasons).OrderBy(s => s.League).ToList();
-            dataGridView1.Rows[0].Selected = true;
+            if(dataGridView1.Rows.Count > 0)
+                dataGridView1.Rows[0].Selected = true;
         }
 
         private void DeleteRowButton_Click(object sender, EventArgs e)

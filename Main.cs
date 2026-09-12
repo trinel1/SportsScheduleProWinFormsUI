@@ -33,11 +33,11 @@ namespace SportsSchedulePro
             // Uncomment the line below to start fresh with a new database.
             // this.dbContext.Database.EnsureDeleted();
             dbc.Database.EnsureCreated();
-            foreach (Team t in dbc.Teams.Where(s => s.Name == null))
-            {
-                dbc.Entry(t).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
-                dbc.SaveChanges();
-            }
+            //foreach (Team t in dbc.Teams.Where(s => s.Name == null))
+            //{
+            //    dbc.Entry(t).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+            //    dbc.SaveChanges();
+            //}
         }
 
         private void connectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,8 +82,8 @@ namespace SportsSchedulePro
                 Name = "Flaming Turtles",
                 ShirtColorChosen = "Red/Yellow",
                 ShortsColorChosen = "Green",
-                Players = new List<Player> { new Player { Name = "Sue"} , new Player { Name = "Jenny"}, new Player { Name = "Sam"} },
-                Coaches = new List<Coach> { new Coach { Name = "Greg Simms"} },
+                Players = new List<Player> { new Player { Name = "Sue" }, new Player { Name = "Jenny" }, new Player { Name = "Sam" } },
+                Coaches = new List<Coach> { new Coach { Name = "Greg Simms" } },
             });
             dbc.Alerts.Add(alert);
             dbc.SaveChanges();
@@ -102,7 +102,7 @@ namespace SportsSchedulePro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.DataSource.GetType() == typeof(List<Team>))
+            if (dataGridView1.DataSource.GetType() == typeof(List<Team>))
             {
                 dbc.Teams.Add(new Team
                 {
@@ -148,7 +148,7 @@ namespace SportsSchedulePro
         {
             saveFileDialogExport.Filter = "Comma-separated values (*.csv)|*.csv";
 
-            if(saveFileDialogExport.ShowDialog() == DialogResult.OK)
+            if (saveFileDialogExport.ShowDialog() == DialogResult.OK)
             {
                 string fileName = saveFileDialogExport.FileName + (saveFileDialogExport.FileName.Contains(".csv") ? "" : ".csv");
                 string fileData = ExportService.ExportSchedule();
@@ -202,6 +202,11 @@ namespace SportsSchedulePro
         private void btnGameEditor_Click(object sender, EventArgs e)
         {
             new GameEditor().ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
